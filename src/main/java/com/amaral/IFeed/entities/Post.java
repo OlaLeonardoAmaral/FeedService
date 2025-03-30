@@ -1,4 +1,4 @@
-package com.amaral.IFeed.entity;
+package com.amaral.IFeed.entities;
 
 import java.time.LocalDateTime;
 
@@ -19,6 +19,7 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+
     private String text;
     private String media;
 

@@ -1,4 +1,4 @@
-package com.amaral.IFeed.entity;
+package com.amaral.IFeed.entities;
 
 import java.time.LocalDateTime;
 

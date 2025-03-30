@@ -1,4 +1,4 @@
-package com.amaral.IFeed.entity;
+package com.amaral.IFeed.entities;
 
 import java.time.LocalDateTime;
 
@@ -7,19 +7,29 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import lombok.Data;
 
 @Data
-@Entity(name = "likes")
-public class Likes {
+@Entity(name = "comments")
+public class Comment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    private String postId;
-    private String userId;
+    @Column(nullable = false)
+    private String text;
+
+    @ManyToOne
+    @JoinColumn(name = "post_id")
+    private Post post;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
@@ -28,5 +38,4 @@ public class Likes {
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
     }
-
 }
