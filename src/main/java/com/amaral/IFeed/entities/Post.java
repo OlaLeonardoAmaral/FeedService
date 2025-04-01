@@ -21,7 +21,6 @@ public class Post {
     private String id;
 
     private String text;
-    private String media;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

@@ -1,0 +1,43 @@
+package com.amaral.IFeed.dtos;
+
+public record CreatePostDTO(String content, String userId) {
+    // private String title;
+    // private String content;
+    // private String author;
+    // private String category;
+    // private String tags;
+    // private String imageUrl;
+    // private String videoUrl;
+    // private String audioUrl;
+    // private String link;
+    // private String location;
+    // private String date;
+    // private String time;
+    // private String duration;
+    // private String language;
+    // private String description;
+    // private String keywords;
+    // private String excerpt;
+    // private String status;
+    // private String visibility;
+    // private String password;
+    // private String comments;
+    // private String commentsAllowed;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+    // private String commentsOpen;
+    // private String commentsClosed;
+}
