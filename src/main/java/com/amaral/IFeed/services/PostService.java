@@ -25,7 +25,7 @@ public class PostService {
                 .findById(post.userId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        if(!user.getIsAdmin()) {
+        if (!user.getIsAdmin()) {
             throw new RuntimeException("User is not an admin");
         }
 
