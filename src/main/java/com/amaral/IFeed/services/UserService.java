@@ -8,8 +8,9 @@ import com.amaral.IFeed.repositories.UserRepository;
 
 @Service
 public class UserService {
-    
+
     private UserRepository userRepository;
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -19,5 +20,12 @@ public class UserService {
         user.setUsername(userDTO.username());
         user.setIsAdmin(userDTO.isAdmin());
         return userRepository.save(user);
+    }
+    
+    public User findUserById(String id) {
+        User user = userRepository
+                .findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+        return user;
     }
 }
